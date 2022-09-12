@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Todo List</title>
+    <link rel="stylesheet" href="style/normalize.css" />
+    <link rel="stylesheet" href="style/index.css" />
+    <!-- <script src="scripts/Api.js" defer></script>
+  <script src="scripts/TodoList.js" defer></script>
+  <script src="scripts/TodoListForm.js" defer></script>
+  <script src="scripts/TodoListItem.js" defer></script> -->
+    <script src="/scripts/TodoItem.js" defer></script>
+    <script src="scripts/index.js" defer></script>
+  </head>
+
+  <body>
+    <div class="page">
+      <section class="todolist">
+        <h1>Todo List</h1>
+        <form class="todolist__form">
+          <label class="todolist__field">
+            <input
+              type="text"
+              class="todolist__form-input"
+              placeholder="Что бы такого сделать..."
+            />
+          </label>
+          <button type="submit" class="todolist__form-submit">Сохранить</button>
+        </form>
+      </section>
+    </div>
+
+    <!-- <template id="todolist-template" style="display: none">
+      <section class="todolist">
+        <h1>Todo List</h1>
+      </section>
+    </template> -->
+
+    <!-- <template id="todolist-form-template">
+      <form class="todolist-form">
+        <input
+          type="text"
+          class="todolist-form_input"
+          placeholder="Fill in your fancy plans"
+        />
+        <button type="submit" class="todolist-form_submit">Save</button>
+      </form>
+    </template> -->
+
+    <template id="todolist__item-template">
+      <article class="todolist__item">
+        <span class="todolist__item-text">Task text</span>
+        <button class="todolist__item-copy"></button>
+        <button class="todolist__item-del"></button>
+      </article>
+    </template>
+  </body>
+</html>
