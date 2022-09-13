@@ -33,3 +33,14 @@ export default class TodoItem {
       this._handleCopyItem();
     });
   }
+
+  generateItem() {
+    this._element = this._getTemplate();
+    this._setEventListeners();
+
+    this._itemText = this._element.querySelector('.todolist__item-text');
+    this._itemText.textContent = this._text;
+
+    return this._element;
+  }
+}

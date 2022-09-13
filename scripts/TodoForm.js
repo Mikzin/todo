@@ -1,4 +1,4 @@
-class TodoForm {
+export default class TodoForm {
   constructor(formSelector, handleFormSubmit) {
     this._handleFormSubmit = handleFormSubmit;
     this._form = document.querySelector(formSelector);
@@ -11,8 +11,8 @@ class TodoForm {
 
     this._formValue.name = this._input.value;
 
-    console.log(this._formValue);
-    console.log(this._formValue.name);
+    // console.log(this._formValue);
+    // console.log(this._formValue.name);
     return this._formValue;
   }
 

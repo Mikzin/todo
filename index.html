@@ -6,11 +6,10 @@
     <title>Todo List</title>
     <link rel="stylesheet" href="style/normalize.css" />
     <link rel="stylesheet" href="style/index.css" />
+    <script src="/scripts/index.js" type="module" defer></script>
     <script src="/scripts/TodoItem.js" type="module" defer></script>
     <script src="/scripts/TodoForm.js" type="module" defer></script>
     <script src="/scripts/TodoList.js" type="module" defer></script>
-
-    <script src="scripts/index.js" type="module" defer></script>
   </head>
 
   <body>
@@ -24,25 +23,15 @@
               class="todolist__form-input"
               name="text"
               placeholder="Что бы такого сделать..."
+              required
+              minlength="2"
+              maxlength="30"
             />
           </label>
           <button type="submit" class="todolist__form-submit">Сохранить</button>
         </form>
       </section>
     </div>
-
-    <!-- <template id="todolist__form-template">
-      <form class="todolist__form">
-        <label class="todolist__field">
-          <input
-            type="text"
-            class="todolist__form-input"
-            placeholder="Fill in your fancy plans"
-          />
-        </label>
-        <button type="submit" class="todolist__form-submit">Save</button>
-      </form>
-    </template> -->
 
     <template id="todolist__item-template">
       <article class="todolist__item">
