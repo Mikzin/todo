@@ -6,12 +6,11 @@
     <title>Todo List</title>
     <link rel="stylesheet" href="style/normalize.css" />
     <link rel="stylesheet" href="style/index.css" />
-    <!-- <script src="scripts/Api.js" defer></script>
-  <script src="scripts/TodoList.js" defer></script>
-  <script src="scripts/TodoListForm.js" defer></script>
-  <script src="scripts/TodoListItem.js" defer></script> -->
-    <script src="/scripts/TodoItem.js" defer></script>
-    <script src="scripts/index.js" defer></script>
+    <!-- <script src="/scripts/TodoItem.js" type="module" defer></script>
+    <script src="/scripts/TodoForm.js" type="module" defer></script>
+    <script src="/scripts/TodoList.js" type="module" defer></script> -->
+
+    <script src="scripts/index.js" type="module" defer></script>
   </head>
 
   <body>
@@ -31,20 +30,16 @@
       </section>
     </div>
 
-    <!-- <template id="todolist-template" style="display: none">
-      <section class="todolist">
-        <h1>Todo List</h1>
-      </section>
-    </template> -->
-
-    <!-- <template id="todolist-form-template">
-      <form class="todolist-form">
-        <input
-          type="text"
-          class="todolist-form_input"
-          placeholder="Fill in your fancy plans"
-        />
-        <button type="submit" class="todolist-form_submit">Save</button>
+    <!-- <template id="todolist__form-template">
+      <form class="todolist__form">
+        <label class="todolist__field">
+          <input
+            type="text"
+            class="todolist__form-input"
+            placeholder="Fill in your fancy plans"
+          />
+        </label>
+        <button type="submit" class="todolist__form-submit">Save</button>
       </form>
     </template> -->
 
