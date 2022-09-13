@@ -1,4 +1,4 @@
-class TodoList {
+export default class TodoList {
   constructor({ data, renderer }, containerSelector) {
     this._container = document.querySelector(containerSelector);
     this._renderedItems = data;
@@ -14,10 +14,6 @@ class TodoList {
   }
 
   renderItems() {
-    // this.clear();
-
-    // this._renderedItems = list;
-
     this._renderedItems.forEach((item) => {
       this._renderer(item);
     });

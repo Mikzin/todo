@@ -6,9 +6,9 @@
     <title>Todo List</title>
     <link rel="stylesheet" href="style/normalize.css" />
     <link rel="stylesheet" href="style/index.css" />
-    <!-- <script src="/scripts/TodoItem.js" type="module" defer></script>
+    <script src="/scripts/TodoItem.js" type="module" defer></script>
     <script src="/scripts/TodoForm.js" type="module" defer></script>
-    <script src="/scripts/TodoList.js" type="module" defer></script> -->
+    <script src="/scripts/TodoList.js" type="module" defer></script>
 
     <script src="scripts/index.js" type="module" defer></script>
   </head>
@@ -17,11 +17,12 @@
     <div class="page">
       <section class="todolist">
         <h1>Todo List</h1>
-        <form class="todolist__form">
+        <form class="todolist__form" id="form">
           <label class="todolist__field">
             <input
               type="text"
               class="todolist__form-input"
+              name="text"
               placeholder="Что бы такого сделать..."
             />
           </label>

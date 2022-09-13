@@ -1,7 +1,7 @@
-class TodoItem {
+export default class TodoItem {
   constructor(templateSelector, data) {
     this._templateSelector = templateSelector;
-    this._text = data.text;
+    this._text = data.name;
   }
 
   _getTemplate() {
@@ -17,22 +17,19 @@ class TodoItem {
     this._element.remove();
   }
 
-  _handleCopyItem() {}
+  _handleCopyItem() {
+    this.container = document.querySelector('.todolist');
+    this.container.append(this.generateItem());
+  }
 
   _setEventListeners() {
     this._deleteButton = this._element.querySelector('.todolist__item-del');
+    this._copyButton = this._element.querySelector('.todolist__item-copy');
     this._deleteButton.addEventListener('click', () => {
       this._handleDeleteItem();
     });
+
+    this._copyButton.addEventListener('click', () => {
+      this._handleCopyItem();
+    });
   }
-
-  generateItem() {
-    this._element = this._getTemplate();
-    this._setEventListeners();
-
-    this._itemText = this._element.querySelector('.todolist__item-text');
-    this._itemText.textContent = this._text;
-
-    return this._element;
-  }
-}
