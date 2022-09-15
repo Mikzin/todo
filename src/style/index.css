@@ -1,10 +1,19 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;900&display=swap');
 @import url('./normalize.css');
 
+.root {
+  background-color: black;
+  max-width: 1280px;
+  margin: 0 auto;
+}
+
 .page {
   min-height: 100vh;
-  background: black;
+  max-width: 1280px;
   font-family: 'Inter', sans-serif;
+  margin: 0 auto;
+  background-color: black;
+  max-width: 1280px;
 }
 
 .todolist {
@@ -32,12 +41,12 @@ h1 {
   border-radius: 5px;
   font-size: 24px;
   padding: 21px;
-  font-family: 'Inter', sans-serif;
   font-style: normal;
   font-weight: 900;
   border: none;
   flex-grow: 1;
   width: 470px;
+  min-width: 300px;
 }
 
 .todolist__form-submit {
@@ -45,7 +54,6 @@ h1 {
   font-size: 24px;
   padding: 21px;
   border-radius: 5px;
-  font-family: 'Inter', sans-serif;
   font-style: normal;
   font-weight: 900;
   border: none;
@@ -65,6 +73,8 @@ h1 {
   border-radius: 5px;
   padding: 40px;
   margin-bottom: 10px;
+  max-width: 700px;
+  margin: 10px;
 }
 
 .todolist__item-text {
@@ -102,4 +112,23 @@ h1 {
 
 .todolist__item-copy:hover {
   opacity: 0.8;
+}
+
+@media screen and (max-width: 720px) {
+  .page {
+    max-width: 720px;
+  }
+
+  .todolist__form {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .todolist__field {
+    margin-bottom: 30px;
+  }
+
+  .todolist__form-submit {
+    min-width: 320px;
+  }
 }
