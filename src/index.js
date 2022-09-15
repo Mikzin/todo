@@ -1,6 +1,9 @@
-import TodoList from './TodoList.js';
-import TodoForm from './TodoForm.js';
-import TodoItem from './TodoItem.js';
+import './style/index.css';
+import TodoList from './scripts/TodoList.js';
+import TodoForm from './scripts/TodoForm.js';
+import TodoItem from './scripts/TodoItem.js';
+import deleteButtonImage from './images/del.svg';
+import copyButtonImage from './images/copy.svg';
 
 const exampleList = [
   {
@@ -19,6 +22,9 @@ function createItem(item) {
   const itemElement = todoItem.generateItem();
   return itemElement;
 }
+function handleFormSubmit(data) {
+  list.addItem(createItem(data));
+}
 
 const list = new TodoList(
   {
@@ -31,10 +37,9 @@ const list = new TodoList(
 );
 list.renderItems();
 
-function handleFormSubmit(data) {
-  list.addItem(createItem(data));
-}
-
 const form = new TodoForm('.todolist__form', handleFormSubmit);
-
 form.setEventListeners();
+
+/////////
+///////// ADD WEBPACK AND MOBILE VERSION
+////////

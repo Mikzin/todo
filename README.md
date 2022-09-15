@@ -13,5 +13,6 @@
 -Работа с классами по ООП
 -Разделение на модули
 -Адаптивная верстка
+-Сборка при помощи Webpack
 
 Ссылка на GitHub Pages: https://mikzin.github.io/todo/index.html
