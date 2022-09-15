@@ -17,7 +17,7 @@
 }
 
 .todolist {
-  width: 700px;
+  max-width: 700px;
   margin: 0 auto;
   padding: 96px 0 12px;
 }
@@ -34,6 +34,9 @@ h1 {
 .todolist__form {
   display: flex;
   margin-bottom: 30px;
+  justify-content: space-between;
+  margin: 0 auto;
+  align-items: center;
 }
 
 .todolist__form-input {
@@ -46,11 +49,13 @@ h1 {
   border: none;
   flex-grow: 1;
   width: 470px;
-  min-width: 300px;
+  min-width: 200px;
+  max-width: 600px;
 }
 
 .todolist__form-submit {
-  background: white;
+  background-color: white;
+  color: black;
   font-size: 24px;
   padding: 21px;
   border-radius: 5px;
@@ -59,6 +64,9 @@ h1 {
   border: none;
   margin-left: 10px;
   cursor: pointer;
+  min-width: 150px;
+  width: 100%;
+  max-width: 300px;
 }
 
 .todolist__form-submit:hover {
@@ -74,6 +82,7 @@ h1 {
   padding: 40px;
   margin-bottom: 10px;
   max-width: 700px;
+  min-width: 300px;
   margin: 10px;
 }
 
@@ -84,11 +93,14 @@ h1 {
   font-size: 24px;
   color: white;
   flex-grow: 1;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
 }
 
 .todolist__item-copy {
-  width: 24px;
-  height: 24px;
+  min-width: 24px;
+  min-height: 24px;
   background: url('../images/copy.svg') no-repeat center;
   background-size: 24px 24px;
   border: none;
@@ -97,8 +109,8 @@ h1 {
 }
 
 .todolist__item-del {
-  width: 24px;
-  height: 24px;
+  min-width: 24px;
+  min-height: 24px;
   background: url('../images/del.svg') no-repeat center;
   background-size: 20px 20px;
   border: none;
@@ -121,7 +133,6 @@ h1 {
 
   .todolist__form {
     flex-direction: column;
-    align-items: center;
   }
 
   .todolist__field {
@@ -129,6 +140,16 @@ h1 {
   }
 
   .todolist__form-submit {
-    min-width: 320px;
+    max-width: 100%;
+    margin-left: 0;
+  }
+
+  .todolist__item {
+    min-width: 300px;
+  }
+
+  .todolist__form-input {
+    width: 88%;
+    margin: 5px;
   }
 }
